@@ -235,6 +235,15 @@
         </div>
         <button class="btn-add" onclick="addItem('Espetinho de Coração de Frango', 5.50)">+</button>
     </div>
+    <div class="card">
+        <img src="coracao.webp" class="produto-img">
+        <div class="info">
+            <h3>Espetinho de Coração de Boi</h3>
+            <p></p>
+            <span class="preco">R$ 5,50</span>
+        </div>
+        <button class="btn-add" onclick="addItem('Espetinho de Coração de Boi', 5.50)">+</button>
+    </div>
 
     <div class="card">
         <img src="queijo.webp" class="produto-img">
@@ -267,16 +276,6 @@
     </div>
 
     <div class="card">
-        <img src="porco.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Porco</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Porco', 5.50)">+</button>
-    </div>
-
-    <div class="card">
         <img src="asa.webp" class="produto-img">
         <div class="info">
             <h3>Espetinho de Asa de Frango</h3>
@@ -284,6 +283,16 @@
             <span class="preco">R$ 5,50</span>
         </div>
         <button class="btn-add" onclick="addItem('Espetinho de Asa de Frango', 5.50)">+</button>
+    </div>
+	
+    <div class="card">
+        <img src="porco.webp" class="produto-img">
+        <div class="info">
+            <h3>Espetinho de Porco</h3>
+            <p></p>
+            <span class="preco">R$ 5,50</span>
+        </div>
+        <button class="btn-add" onclick="addItem('Espetinho de Porco', 5.50)">+</button>
     </div>
 
     <span class="categoria-titulo">🍱 Caldinhos</span>
@@ -674,7 +683,7 @@
     <small class="endereco-texto">
 			<span class="map-address__text">Espetinho do Max, Rua Eucalipto, 48, Extremoz, RN</span>
 			<a href="https://maps.google.com/?q=Espetinho%20do%20Max%2C%20Rua%20Eucalipto%2C%2048%2C%20Extremoz%2C%20RN" target="_blank" class="btn" color="#ffffff">Como Chegar</a><br>
-        <strong>Aberto para retirada e delivery!</strong>
+        <strong>Aberto para consumo no local, retirada e delivery!</strong>
     </small>
 </div>
 
@@ -772,7 +781,7 @@ function enviarParaWhatsapp() {
             <label>Em qual mesa você está? *</label>
             <input type="text" id="address" required placeholder="Ex: Mesa 02">
             
-            <label>Forma de Pagamento *</label>
+            <label>Forma de Pagamento</label>
             <select id="payment">
                 <option value="">Selecione...</option>
                 <option value="Pix">Pix</option>
