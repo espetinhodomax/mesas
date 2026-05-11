@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espetinho do Max - Pedido Online</title>
+    <title>Espetinho do Max - Mesas</title>
     <style>
         :root { --primary: #e63946; --secondary: #2a9d8f; --dark: #1d3557; --bg: #000000; --stars: #ffb100; --gray: #888; }
         body { font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); margin: 0; padding-bottom: 120px; color: #333; }
@@ -864,7 +864,7 @@ function enviarParaWhatsapp() {
         }
 
         const phone = "5584981472386"; // SUBSTITUA PELO SEU WHATSAPP
-        let text = `*PEDIDO - ESPETINHO DO MAX*\n\n`;
+        let text = `*PEDIDO NA MESA - ESPETINHO DO MAX*\n\n`;
         
         for (let name in cart) {
             text += `✅ ${cart[name].qty}x ${name} - R$ ${(cart[name].price * cart[name].qty).toFixed(2)}\n`;
@@ -872,8 +872,7 @@ function enviarParaWhatsapp() {
         
         text += `\n*💰 TOTAL: R$ ${total.toFixed(2)}*`;
         text += `\n\n📍 *Nome:* ${name}`;
-        text += `\n\n📍 *Endereço:* ${address}`;
-        text += `\n💳 *Pagamento:* ${payment}`;
+        text += `\n\n📍 *Mesa:* ${address}`;
         if (note) text += `\n📝 *Obs:* ${note}`;
 
         const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
