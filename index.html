@@ -769,11 +769,19 @@ function enviarParaWhatsapp() {
             <label>Nome</label>
             <input type="text" id="name" required placeholder="Ex: João">
             
-            <label>Qual mesa você está?*</label>
-            <input type="text" id="address" required placeholder="Ex: Mesa 02">
-			
+            <label>Endereço Completo (Rua, Nº, Bairro) *</label>
+            <input type="text" id="address" required placeholder="Ex: Rua das Flores, 123, Centro">
+            
+            <label>Forma de Pagamento *</label>
+            <select id="payment" required>
+                <option value="">Selecione...</option>
+                <option value="Pix">Pix</option>
+                
+                <option value="Link de Pagamento">Link de Pagamento</option>
+            </select>
+
             <label>Alguma observação?</label>
-            <input type="text" id="note" placeholder="">
+            <input type="text" id="note" placeholder="Ex: Sem cebola, troco para 50...">
         </form>
     </div>
 </div>
@@ -783,7 +791,7 @@ function enviarParaWhatsapp() {
         <small>Total do pedido</small>
         <strong id="total-display">R$ 0,00</strong>
     </div>
-    <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Pedido</button>
+    <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Carrinho</button>
 </div>
 
 <script>
@@ -808,7 +816,7 @@ function enviarParaWhatsapp() {
         if (totalItems > 0) {
             document.getElementById('footer-nav').style.display = 'flex';
             if (!isCheckingOut) {
-                document.getElementById('btn-action').innerText = `Ver Pedido (${totalItems})`;
+                document.getElementById('btn-action').innerText = `Ver Carrinho (${totalItems})`;
             }
         }
 
@@ -841,14 +849,14 @@ function enviarParaWhatsapp() {
     }
 
     function clearCart() {
-        if (confirm("Deseja limpar seu pedido?")) {
+        if (confirm("Deseja limpar seu carrinho?")) {
             cart = {};
             total = 0;
             isCheckingOut = false;
             document.getElementById('checkout-area').style.display = 'none';
             document.getElementById('footer-nav').style.display = 'none';
             document.getElementById('btn-action').style.background = "#25d366";
-            document.getElementById('btn-action').innerText = "Ver Pedido";
+            document.getElementById('btn-action').innerText = "Ver Carrinho";
         }
     }
 
