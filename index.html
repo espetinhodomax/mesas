@@ -773,11 +773,11 @@ function enviarParaWhatsapp() {
             <input type="text" id="address" required placeholder="Ex: Mesa 02">
             
             <label>Forma de Pagamento *</label>
-            <select id="payment" required>
+            <select id="payment">
                 <option value="">Selecione...</option>
                 <option value="Pix">Pix</option>
-                <option value="Cartao">Link de Pagamento</option>
-                <option value="Dinheiro">Link de Pagamento</option>
+                <option value="Cartao">Cartão</option>
+                <option value="Dinheiro">Dinheiro</option>
             </select>
 
             <label>Alguma observação?</label>
@@ -866,8 +866,8 @@ function enviarParaWhatsapp() {
         const payment = document.getElementById('payment').value;
         const note = document.getElementById('note').value;
 
-        if (!address || !payment) {
-            alert("⚠️ Por favor, preencha o endereço e a forma de pagamento.");
+        if (!address) {
+            alert("⚠️ Por favor, preencha a mesa em que você está!.");
             return;
         }
 
@@ -880,7 +880,7 @@ function enviarParaWhatsapp() {
         
         text += `\n*💰 TOTAL: R$ ${total.toFixed(2)}*`;
         text += `\n\n📍 *Nome:* ${name}`;
-        text += `\n\n📍 *Endereço:* ${address}`;
+        text += `\n\n📍 *Mesa:* ${address}`;
         text += `\n💳 *Pagamento:* ${payment}`;
         if (note) text += `\n📝 *Obs:* ${note}`;
 
