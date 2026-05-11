@@ -769,19 +769,19 @@ function enviarParaWhatsapp() {
             <label>Nome</label>
             <input type="text" id="name" required placeholder="Ex: João">
             
-            <label>Endereço Completo (Rua, Nº, Bairro) *</label>
-            <input type="text" id="address" required placeholder="Ex: Rua das Flores, 123, Centro">
+            <label>Em qual mesa você está? *</label>
+            <input type="text" id="address" required placeholder="Ex: Mesa 02">
             
             <label>Forma de Pagamento *</label>
             <select id="payment" required>
                 <option value="">Selecione...</option>
                 <option value="Pix">Pix</option>
-                
-                <option value="Link de Pagamento">Link de Pagamento</option>
+                <option value="Cartao">Link de Pagamento</option>
+                <option value="Dinheiro">Link de Pagamento</option>
             </select>
 
             <label>Alguma observação?</label>
-            <input type="text" id="note" placeholder="Ex: Sem cebola, troco para 50...">
+            <input type="text" id="note" placeholder="">
         </form>
     </div>
 </div>
@@ -791,7 +791,7 @@ function enviarParaWhatsapp() {
         <small>Total do pedido</small>
         <strong id="total-display">R$ 0,00</strong>
     </div>
-    <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Carrinho</button>
+    <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Pedido</button>
 </div>
 
 <script>
