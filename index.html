@@ -813,7 +813,7 @@ function enviarParaWhatsapp() {
     <div id="checkout-area">
         <div class="head-check">
             <h3>🛒 Meu Pedido</h3>
-            <button class="btn-clear" onclick="clearCart()">Esvaziar</button>
+            <button class="btn-clear" onclick="clearCart()">Limpar</button>
         </div>
         <div id="cart-list"></div>
         
@@ -924,7 +924,7 @@ function enviarParaWhatsapp() {
         }
 
         const phone = "5584981472386"; // SUBSTITUA PELO SEU WHATSAPP
-        let text = `*PEDIDO - ESPETINHO DO MAX*\n\n`;
+        let text = `*PEDIDO - MESA - ESPETINHO DO MAX*\n\n`;
         
         for (let name in cart) {
             text += `✅ ${cart[name].qty}x ${name} - R$ ${(cart[name].price * cart[name].qty).toFixed(2)}\n`;
@@ -950,7 +950,7 @@ function enviarParaWhatsapp() {
   .fire-btn {
     display: block;
     position: fixed;
-    bottom: 20px;
+    bottom: 100px;
     right: 30px;
     z-index: 99;
     width: 60px;
