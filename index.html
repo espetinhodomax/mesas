@@ -1105,29 +1105,47 @@
             }
         }
 
-        // Integração WhatsApp (Pedido e Feedback)
         function sendWhatsApp() {
-            const name = document.getElementById('name').value;
-            const address = document.getElementById('address').value;
+            const name = document.getElementById('name').value.trim();
+            const address = document.getElementById('address').value.trim();
             const payment = document.getElementById('payment').value;
             const note = document.getElementById('note').value;
 
-            if (!address) {
-                alert("⚠️ Por favor, preencha a mesa em que você está!");
+            // --- VALIDAÇÕES OBRIGATÓRIAS ---
+            if (!name) {
+                alert("⚠️ Por favor, informe o seu Nome!");
+                document.getElementById('name').focus();
                 return;
             }
 
-            const phone = "5584981472386";
-            let text = `*PEDIDO - MESA - ESPETINHO DO MAX*\n\n`;
-
-            for (let name in cart) {
-                text += `✅ ${cart[name].qty}x ${name} - R$ ${(cart[name].price * cart[name].qty).toFixed(2).replace('.', ',')}\n`;
+            if (!address) {
+                alert("⚠️ Por favor, informe sua mesa!");
+                document.getElementById('address').focus();
+                return;
             }
 
-            text += `\n*💰 TOTAL: R$ ${total.toFixed(2).replace('.', ',')}*`;
-            text += `\n\n👤 *Cliente:* ${name || 'Não informado'}`;
+            if (!payment) {
+                alert("⚠️ Por favor, selecione uma Forma de Pagamento!");
+                document.getElementById('payment').focus();
+                return;
+            }
+
+            // Verifica se há itens no carrinho
+            if (Object.keys(cart).length === 0) {
+                alert("⚠️ Seu pedido está vazio! Adicione algum item antes de fazer o pedido.");
+                return;
+            }
+
+            const phone = "5584981472386"; 
+            let text = `*PEDIDO - MESAS - ESPETINHO DO MAX*\n\n`;
+            for (let itemID in cart) {
+                text += `✅ ${cart[itemID].qty}x ${itemID} - R$ ${(cart[itemID].price * cart[itemID].qty).toFixed(2).replace('.',',')}\n`;
+            }
+    
+            text += `\n*💰 TOTAL: R$ ${total.toFixed(2).replace('.',',')}*`;
+            text += `\n\n👤 *Cliente:* ${name}`;
             text += `\n📍 *Mesa:* ${address}`;
-            text += `\n💳 *Pagamento:* ${payment || 'A combinar'}`;
+            text += `\n💳 *Pagamento:* ${payment}`;
             if (note) text += `\n📝 *Obs:* ${note}`;
 
             const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
