@@ -5,826 +5,1012 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espetinho do Max - Mesas</title>
     <style>
-        :root { --primary: #e63946; --secondary: #2a9d8f; --dark: #1d3557; --bg: #000000; --stars: #ffb100; --gray: #888; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); margin: 0; padding-bottom: 120px; color: #333; }
-        
-        header { background-image: url('https://storage.googleapis.com/cdn-jim-app-assets-production/bg-images/espetinhodomax/31ea8346dc91.jpg');; color: white; text-align: center; padding: 25px 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); background-position: center;    background-repeat: no-repeat;
- }
-        header h1 { margin: 0; font-size: 2.6rem; text-transform: uppercase; letter-spacing: 1px; }
-        header p { margin: 5px 0 0; font-size: 1.0rem; opacity: 0.9; }
-
-        .container { max-width: 550px; 
-                     margin: auto; 
-                     padding: 15px; }
-        .container2 { max-width: 500px; 
-                      text-align: justify; 
-                      text-decoration: none !important; 
-                      margin: auto; 
-                      padding: 15px;
-                      display: flex;
-                      justify-content: space-between;
-                      align-items: center; 
-                       }
-.container-links {
-    display: grid;
-    /* Cria duas colunas com larguras iguais (1fr = 1 fração) */
-    grid-template-columns: 1fr 1fr; 
-    /* Espaço entre as linhas e colunas */
-    gap: 10px 20px; 
-    padding: 10px;
-   max-width: 550px; 
-                     margin: auto; 
-                     padding: 15px; }
-
-  .container-links a {
-    text-decoration: none;
-    color: #fff;
-    /* Garante que o link ocupe o espaço da coluna para facilitar o clique */
-    display: block; 
-    font-weight: bold;
-font-size: 1.2rem;
-  }
-        
-        .categoria-titulo { 
-            color: #ffffff; font-size: 1.2rem; margin: 25px 0 15px; 
-            padding-bottom: 5px; border-bottom: 2px solid var(--primary); display: block; font-weight: bold;
-
+        :root {
+            --primary: #e63946;
+            --secondary: #2a9d8f;
+            --dark: #1d3557;
+            --bg: #000000;
+            --stars: #ffb100;
+            --gray: #888;
         }
 
-        /* Cards de Produto */
-        .card { 
-            background: #ffffff; padding: 12px; border-radius: 12px; 
-            display: flex; align-items: center; margin-bottom: 12px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s;
+        /* --- Estilos Gerais --- */
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding-bottom: 120px;
+            color: #333;
         }
-        .produto-img { width: 85px; height: 85px; border-radius: 10px; object-fit: cover; margin-right: 15px; background: #ddd; }
-        .info { flex-grow: 1; }
-        .info h3 { margin: 0; font-size: 1rem; color: #222; }
-        .info p { margin: 4px 0; font-size: 0.8rem; color: #666; line-height: 1.2; }
-        .preco { color: var(--primary); font-weight: bold; font-size: 1.1rem; display: block; margin-top: 5px; }
 
-        .btn-add { 
-            background: var(--secondary); color: white; border: none; 
-            width: 42px; height: 42px; border-radius: 50%; 
-            font-weight: bold; font-size: 1.4rem; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        /* --- Cabeçalho --- */
+        header {
+            background-image: url('https://storage.googleapis.com/cdn-jim-app-assets-production/bg-images/espetinhodomax/31ea8346dc91.jpg');
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; /* Adicionado para melhor ajuste da imagem */
         }
-        .btn-add:active { transform: scale(0.85); background: var(--dark); }
 
-        /* --- SEÇÃO DE DEPOIMENTOS --- */
-        .depoimentos-secao { margin-top: 40px; margin-bottom: 20px; }
-        .depoimento-card { 
-            background: white; padding: 20px; border-radius: 12px; 
-            margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
-            position: relative; overflow: hidden;
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        
-        /* Aspas estilizadas no canto */
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.0rem;
+            opacity: 0.9;
+        }
+
+        /* --- Layout e Containers --- */
+        .container {
+            max-width: 550px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .container2 {
+            max-width: 500px;
+            text-align: justify;
+            text-decoration: none !important;
+            margin: auto;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+            max-width: 550px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .container-links a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .categoria-titulo {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--primary);
+            display: block;
+            font-weight: bold;
+        }
+
+        /* --- Cards de Produto --- */
+        .card {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+        }
+
+        .produto-img {
+            width: 85px;
+            height: 85px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 15px;
+            background: #ddd;
+        }
+
+        .info {
+            flex-grow: 1;
+        }
+
+        .info h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #222;
+        }
+
+        .info p {
+            margin: 4px 0;
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.2;
+        }
+
+        .preco {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .btn-add {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-add:active {
+            transform: scale(0.85);
+            background: var(--dark);
+        }
+
+        /* --- Seção de Depoimentos --- */
+        .depoimentos-secao {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .depoimento-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
         .depoimento-card::before {
-            content: "\201C"; /* Símbolo de aspas abertas */
-            font-size: 8rem; position: absolute; top: -20px; left: -10px;
-            color: rgba(0,0,0,0.04); font-family: serif; font-weight: bold;
+            content: "\201C";
+            font-size: 8rem;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            color: rgba(0, 0, 0, 0.04);
+            font-family: serif;
+            font-weight: bold;
         }
 
-        .stars { color: var(--stars); font-size: 1.1rem; margin-bottom: 10px; }
-        
-        .depoimento-texto { 
-            font-size: 0.9rem; color: #555; line-height: 1.5; font-style: italic; 
-            margin-bottom: 15px; position: relative; z-index: 1;
+        .stars {
+            color: var(--stars);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
         }
 
-        .cliente-info { display: flex; align-items: center; }
-        .cliente-foto { width: 45px; height: 45px; border-radius: 50%; background: #eee; margin-right: 12px; object-fit: cover; }
-        .cliente-nome { font-size: 0.95rem; font-weight: bold; color: var(--dark); }
-        .cliente-status { font-size: 0.8rem; color: var(--gray); display: block; }
+        .depoimento-texto {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
 
-        /* Checkout Section */
-        #checkout-area { background: white; border-radius: 15px; padding: 20px; margin-top: 30px; display: none; border: 1px solid #ddd; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); }
-        .head-check { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .head-check h3 { margin: 0; color: var(--dark); }
-        .btn-clear { background: #fee2e2; color: #dc2626; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.75rem; font-weight: bold; }
+        .cliente-info {
+            display: flex;
+            align-items: center;
+        }
 
-        .line-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed #eee; font-size: 0.95rem; }
-        .badge { background: var(--primary); color: white; padding: 2px 7px; border-radius: 4px; font-size: 0.8rem; margin-right: 8px; }
+        .cliente-foto {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #eee;
+            margin-right: 12px;
+            object-fit: cover;
+        }
 
-        form label { display: block; margin-top: 15px; font-size: 0.85rem; font-weight: bold; color: var(--gray); }
-        form input, form select { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
+        .cliente-nome {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
 
-        /* Rodapé Fixo */
-        .footer-nav { position: fixed; bottom: 0; width: 100%; background: white; padding: 15px 20px; border-top: 1px solid #ddd; display: none; justify-content: space-between; align-items: center; box-sizing: border-box; z-index: 1000; }
-        .total-box small { color: #777; display: block; }
-        .total-box strong { font-size: 1.3rem; color: var(--dark); }
-        .btn-main { background: #25d366; color: white; border: none; padding: 14px 25px; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1rem; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
-   /* Estilo para a Seção de Localização */
-.mapa-secao {
-    margin-top: 30px;
-    background: black;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
+        .cliente-status {
+            font-size: 0.8rem;
+            color: var(--gray);
+            display: block;
+        }
 
-.mapa-container {
-    width: 100%;
-    height: 250px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #eee;
-    margin-top: 10px;
-}
+        /* --- Área de Checkout --- */
+        #checkout-area {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            display: none;
+            border: 1px solid #ddd;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+        }
 
-.endereco-texto {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-}
+        .head-check {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
 
-    #feedback-whatsapp-max {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        font-family: 'Arial', sans-serif;
-    }
+        .head-check h3 {
+            margin: 0;
+            color: var(--dark);
+        }
 
-    .card-zap {
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        width: 100%;
-        max-width: 400px;
-        overflow: hidden;
-        border: 1px solid #e0e0e0;
-    }
+        .btn-clear {
+            background: #fee2e2;
+            color: #dc2626;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
 
-    .header-zap {
-        background: #d32f2f; /* Vermelho brasa */
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
+        .line-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 0.95rem;
+        }
 
-    .header-zap h3 { margin: 0; font-size: 1.4em; }
-    .header-zap p { margin: 5px 0 0; font-size: 0.85em; opacity: 0.9; }
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
 
-    #formZap { padding: 20px; }
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--gray);
+        }
 
-    #formZap label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: #444;
-        font-size: 0.9em;
-    }
+        form input,
+        form select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
 
-    #formZap input, #formZap textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 15px;
-        border: 1.5px solid #ddd;
-        border-radius: 8px;
-        box-sizing: border-box;
-        font-size: 1em;
-    }
+        /* --- Rodapé Fixo --- */
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            padding: 15px 20px;
+            border-top: 1px solid #ddd;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
 
-    #formZap button {
-        background-color: #25D366; /* Verde WhatsApp */
-        color: white;
-        border: none;
-        padding: 15px;
-        width: 100%;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 1.1em;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        transition: transform 0.2s;
-    }
+        .total-box small {
+            color: #777;
+            display: block;
+        }
 
-    #formZap button:hover {
-        background-color: #128C7E;
-        transform: scale(1.02);
-	}
+        .total-box strong {
+            font-size: 1.3rem;
+            color: var(--dark);
+        }
 
- </style>
+        .btn-main {
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        /* --- Seção de Localização --- */
+        .mapa-secao {
+            margin-top: 30px;
+            background: black;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .mapa-container {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        .endereco-texto {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* --- Formulário WhatsApp --- */
+        #feedback-whatsapp-max {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .card-zap {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .header-zap {
+            background: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header-zap h3 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+        .header-zap p {
+            margin: 5px 0 0;
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+
+        #formZap {
+            padding: 20px;
+        }
+
+        #formZap label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+            font-size: 0.9em;
+        }
+
+        #formZap input,
+        #formZap textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        #formZap button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        #formZap button:hover {
+            background-color: #128C7E;
+            transform: scale(1.02);
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Espetinho do Max</h1>
-    <p>🔥 Os melhores espetinhos e caldos da região!</p>
-    <h2>Faça seu pedido na Mesa</h2>
-    <p>📷 Fotos dos produtos meramente ilustrativas!</p>
-</header>
+    <header>
+        <h1>Espetinho do Max</h1>
+        <p>🔥 Os melhores espetinhos e caldos da região!</p>
+        <h2>Faça seu pedido na Mesa</h2>
+        <p>📷 Fotos dos produtos meramente ilustrativas!</p>
+    </header>
 
-<div class="container-menu">
-  <a href="#espetinhos" class="btn-item">Espetinhos</a>
-  <a href="#caldinhos" class="btn-item">Caldinhos</a>
-  <a href="#petiscos" class="btn-item">Petiscos</a>
-  <a href="#porcoes" class="btn-item">Porções</a>
-  <a href="#bebidas-nao-alcoolicas" class="btn-item">Bebidas Não Alcoólicas</a>
-  <a href="#bebidas-alcoolicas" class="btn-item">Bebidas Alcoólicas</a>
-  <a href="#como-chegar" class="btn-item">Como Chegar</a>
-  <a href="#depoimentos" class="btn-item">Depoimentos</a>
-  <a href="#avalie" class="btn-item">Deixe sua Avaliação</a>
-  <a href="#promocoes" class="btn-item">Promoções</a>
-</div>
-	
-<div class="container">
-    
-    <span class="categoria-titulo" id="espetinhos">🍢 Espetinhos</span>
-	
-    <div class="card">
-        <img src="carne.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Carne</h3>
-            <p></p>
-            <span class="preco">R$ 6,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Carne', 6.00)">+</button>
+    <div class="container-menu">
+        <a href="#espetinhos" class="btn-item">Espetinhos</a>
+        <a href="#caldinhos" class="btn-item">Caldinhos</a>
+        <a href="#petiscos" class="btn-item">Petiscos</a>
+        <a href="#porcoes" class="btn-item">Porções</a>
+        <a href="#bebidas-nao-alcoolicas" class="btn-item">Bebidas Não Alcoólicas</a>
+        <a href="#bebidas-alcoolicas" class="btn-item">Bebidas Alcoólicas</a>
+        <a href="#como-chegar" class="btn-item">Como Chegar</a>
+        <a href="#depoimentos" class="btn-item">Depoimentos</a>
+        <a href="#avalie" class="btn-item">Deixe sua Avaliação</a>
+        <a href="#promocoes" class="btn-item">Promoções</a>
     </div>
 
-    <div class="card">
-        <img src="frango.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Frango</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Frango', 5.50)">+</button>
-    </div>
+    <div class="container">
 
-    <div class="card">
-        <img src="lingua.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Lingua</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Lingua', 5.50)">+</button>
-    </div>
+        <span class="categoria-titulo" id="espetinhos">🍢 Espetinhos</span>
 
-    <div class="card">
-        <img src="coracao.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Coração de Frango</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
+        <div class="card">
+            <img src="carne.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Carne</h3>
+                <span class="preco">R$ 6,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Carne', 6.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Coração de Frango', 5.50)">+</button>
-    </div>
-    <div class="card">
-        <img src="coracao.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Coração de Boi</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Coração de Boi', 5.50)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="queijo.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Queijo Coalho</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
+        <div class="card">
+            <img src="frango.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Frango</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Frango', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Queijo Coalho', 5.50)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="calabresa.png" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Calabresa</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
+        <div class="card">
+            <img src="lingua.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Lingua</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Lingua', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Calabresa', 5.50)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="queijo-calabresa.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Queijo com Calabresa</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
+        <div class="card">
+            <img src="coracao.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Coração de Frango</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Coração de Frango', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Queijo com Calabresa', 5.50)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="asa.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Asa de Frango</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
+        <div class="card">
+            <img src="coracao.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Coração de Boi</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Coração de Boi', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Asa de Frango', 5.50)">+</button>
-    </div>
-	
-    <div class="card">
-        <img src="porco.webp" class="produto-img">
-        <div class="info">
-            <h3>Espetinho de Porco</h3>
-            <p></p>
-            <span class="preco">R$ 5,50</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Espetinho de Porco', 5.50)">+</button>
-    </div>
 
-    <span class="categoria-titulo" id="caldinhos">🍱 Caldinhos</span>
+        <div class="card">
+            <img src="queijo.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Queijo Coalho</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Queijo Coalho', 5.50)">+</button>
+        </div>
 
-    <div class="card">
-        <img src="caldo-camarao.png" class="produto-img">
-        <div class="info">
-            <h3>Caldo de Camarão</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="calabresa.png" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Calabresa</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Calabresa', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caldo de Camarão', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="caldo-chambaril.png" class="produto-img">
-        <div class="info">
-            <h3>Caldo de Chambaril</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="queijo-calabresa.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Queijo com Calabresa</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Queijo com Calabresa', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caldo de Chambaril', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="caldo-mocoto.png" class="produto-img">
-        <div class="info">
-            <h3>Caldo de Mocotó</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="asa.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Asa de Frango</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Asa de Frango', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caldo de Mocotó', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="caldo-sertanejo.png" class="produto-img">
-        <div class="info">
-            <h3>Caldo de Sertanejo</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="porco.webp" class="produto-img">
+            <div class="info">
+                <h3>Espetinho de Porco</h3>
+                <span class="preco">R$ 5,50</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Espetinho de Porco', 5.50)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caldo de Sertanejo', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="caldo-fava.png" class="produto-img">
-        <div class="info">
-            <h3>Fava com Dobradinha</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Fava com Dobradinha', 12.00)">+</button>
-    </div>
+        <span class="categoria-titulo" id="caldinhos">🍱 Caldinhos</span>
 
-    <div class="card">
-        <img src="caldo-picado.png" class="produto-img">
-        <div class="info">
-            <h3>Picado de Carneiro</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="caldo-camarao.png" class="produto-img">
+            <div class="info">
+                <h3>Caldo de Camarão</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caldo de Camarão', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Picado de Carneiro', 12.00)">+</button>
-    </div>
- <span class="categoria-titulo" id="petiscos">🍱 Petiscos</span>
 
-    <div class="card">
-        <img src="petisco-carne.webp" class="produto-img">
-        <div class="info">
-            <h3>Filé com Fritas</h3>
-            <p></p>
-            <span class="preco">R$ 38,00</span>
+        <div class="card">
+            <img src="caldo-chambaril.png" class="produto-img">
+            <div class="info">
+                <h3>Caldo de Chambaril</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caldo de Chambaril', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Filé com Fritas', 38.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="petisco-camarao.webp" class="produto-img">
-        <div class="info">
-            <h3>Camarão com Fritas</h3>
-            <p></p>
-            <span class="preco">R$ 38,00</span>
+        <div class="card">
+            <img src="caldo-mocoto.png" class="produto-img">
+            <div class="info">
+                <h3>Caldo de Mocotó</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caldo de Mocotó', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Camarão com Fritas', 38.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="petisco-frango.webp" class="produto-img">
-        <div class="info">
-            <h3>Frango com Fritas</h3>
-            <p></p>
-            <span class="preco">R$ 35,00</span>
+        <div class="card">
+            <img src="caldo-sertanejo.png" class="produto-img">
+            <div class="info">
+                <h3>Caldo de Sertanejo</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caldo de Sertanejo', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Frango com Fritas', 35.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="petisco-calabresa.webp" class="produto-img">
-        <div class="info">
-            <h3>Calabresa com Fritas</h3>
-            <p></p>
-            <span class="preco">R$ 35,00</span>
+        <div class="card">
+            <img src="caldo-fava.png" class="produto-img">
+            <div class="info">
+                <h3>Fava com Dobradinha</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Fava com Dobradinha', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Calabresa com Fritas', 35.00)">+</button>
-    </div>
-    <span class="categoria-titulo" id="porcoes">🍱 Porções</span>
 
-    <div class="card">
-        <img src="batata-frita-p.png" class="produto-img">
-        <div class="info">
-            <h3>Batata Frita P</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="caldo-picado.png" class="produto-img">
+            <div class="info">
+                <h3>Picado de Carneiro</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Picado de Carneiro', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Batata Frita P', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="batata-frita-p.png" class="produto-img">
-        <div class="info">
-            <h3>Batata Frita M</h3>
-            <p></p>
-            <span class="preco">R$ 14,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Batata Frita M', 14.00)">+</button>
-	</div>
+        <span class="categoria-titulo" id="petiscos">🍱 Petiscos</span>
 
-	<div class="card">
-        <img src="batata-frita-g.webp" class="produto-img">
-        <div class="info">
-            <h3>Batata Frita G</h3>
-            <p></p>
-            <span class="preco">R$ 16,00</span>
+        <div class="card">
+            <img src="petisco-carne.webp" class="produto-img">
+            <div class="info">
+                <h3>Filé com Fritas</h3>
+                <span class="preco">R$ 38,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Filé com Fritas', 38.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Batata Frita G', 16.00)">+</button>
-	</div>
-	
-	<div class="card">
-        <img src="bolinho-carne.png" class="produto-img">
-        <div class="info">
-            <h3>Bolinho Carne de Sol</h3>
-            <p></p>
-            <span class="preco">R$ 12,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Bolinho de Carne de Sol', 12.00)">+</button>
-	</div>
-	
-    <span class="categoria-titulo" id="bebidas-nao-alcoolicas">🥤 Bebidas Não-Alcoólicas</span>
 
-    <div class="card">
-        <img src="agua.webp" class="produto-img">
-        <div class="info">
-            <h3>Agua Mineral 500ml</h3>
-            <span class="preco">R$ 3,00</span>
+        <div class="card">
+            <img src="petisco-camarao.webp" class="produto-img">
+            <div class="info">
+                <h3>Camarão com Fritas</h3>
+                <span class="preco">R$ 38,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Camarão com Fritas', 38.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Agua Mineral 500ml', 3.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="aguacomgas.webp" class="produto-img">
-        <div class="info">
-            <h3>Agua Mineral com Gás 500ml</h3>
-            <span class="preco">R$ 4,00</span>
+        <div class="card">
+            <img src="petisco-frango.webp" class="produto-img">
+            <div class="info">
+                <h3>Frango com Fritas</h3>
+                <span class="preco">R$ 35,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Frango com Fritas', 35.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Agua Mineral com Gás 500ml', 4.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="coca.webp" class="produto-img">
-        <div class="info">
-            <h3>Coca-Cola Lata</h3>
-            <span class="preco">R$ 6,00</span>
+        <div class="card">
+            <img src="petisco-calabresa.webp" class="produto-img">
+            <div class="info">
+                <h3>Calabresa com Fritas</h3>
+                <span class="preco">R$ 35,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Calabresa com Fritas', 35.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Coca-Cola Lata', 6.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="coca-zero-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Coca-Cola Zero Lata</h3>
-            <span class="preco">R$ 6,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Coca-Cola Zero Lata', 6.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="fanta-laranja.webp" class="produto-img">
-        <div class="info">
-            <h3>Fanta Laranja Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Fanta Laranja Lata', 5.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="fanta-uva.webp" class="produto-img">
-        <div class="info">
-            <h3>Fanta Uva Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Fanta Uva Lata', 5.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="guarana.webp" class="produto-img">
-        <div class="info">
-            <h3>Guaraná Antártica Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Guaraná Antártica Lata', 5.00)">+</button>
-    </div>
-        
-    <div class="card">
-        <img src="guarana-zero-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Guaraná Antártica Zero Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Guaraná Antártica Zero Lata', 5.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="sprite.webp" class="produto-img">
-        <div class="info">
-            <h3>Sprite Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Sprite Lata', 5.00)">+</button>
-    </div>
-        
-    <div class="card">
-        <img src="pepsi.webp" class="produto-img">
-        <div class="info">
-            <h3>Pepsi Lata</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Pepsi Lata', 5.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="pepsi-litro.webp" class="produto-img">
-        <div class="info">
-            <h3>Pepsi 1 Litro</h3>
-            <span class="preco">R$ 9,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Pepsi 1 Litro', 9.00)">+</button>
-    </div>
-    
-    <div class="card">
-        <img src="guarana-litro.webp" class="produto-img">
-        <div class="info">
-            <h3>Guaraná 1 Litro</h3>
-            <span class="preco">R$ 9,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Guaraná 1 Litro', 9.00)">+</button>
-	</div>
-	
-    <div class="card">
-        <img src="redbull.webp" class="produto-img">
-        <div class="info">
-            <h3>Redbull Lata 250ml</h3>
-            <span class="preco">R$ 14,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Redbull Lata 250ml', 14.00)">+</button>
-	</div>
-	
-    <span class="categoria-titulo" id="bebidas-alcoolicas">🥤 Bebidas Alcoólicas</span>
 
-    <div class="card">
-        <img src="heineken.webp" class="produto-img">
-        <div class="info">
-            <h3>Heineken Long Neck</h3>
-            <span class="preco">R$ 9,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Heineken Long Neck', 9.00)">+</button>
-    </div>
+        <span class="categoria-titulo" id="porcoes">🍱 Porções</span>
 
-    <div class="card">
-        <img src="stella.webp" class="produto-img">
-        <div class="info">
-            <h3>Stella Artois Long Neck</h3>
-            <span class="preco">R$ 9,00</span>
+        <div class="card">
+            <img src="batata-frita-p.png" class="produto-img">
+            <div class="info">
+                <h3>Batata Frita P</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Batata Frita P', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Stella Artois Long Neck', 9.00)">+</button>
-	</div>
-	
-    <div class="card">
-        <img src="devassa-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Devassa Lata 350ml</h3>
-            <span class="preco">R$ 5,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Devassa Lata 350ml', 5.00)">+</button>
-	</div>
-	
-    <div class="card">
-        <img src="itaipava-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Itaipava Lata 350ml</h3>
-            <span class="preco">R$ 4,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Itaipava Lata 350ml', 4.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="matuta.webp" class="produto-img">
-        <div class="info">
-            <h3>Matuta Umburana Garrafa 300ml</h3>
-            <span class="preco">R$ 20,00</span>
+        <div class="card">
+            <img src="batata-frita-p.png" class="produto-img">
+            <div class="info">
+                <h3>Batata Frita M</h3>
+                <span class="preco">R$ 14,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Batata Frita M', 14.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Matuta Umburana Garrafa 300ml', 20.00)">+</button>
-    </div>
-	
-    <div class="card">
-        <img src="matuta.webp" class="produto-img">
-        <div class="info">
-            <h3>Matuta Mel e Limão Garrafa 300ml</h3>
-            <span class="preco">R$ 20,00</span>
-        </div>
-        <button class="btn-add" onclick="addItem('Matuta Mel e Limão Garrafa 300ml', 20.00)">+</button>
-	</div>
 
-    <div class="card">
-        <img src="caranguejo-prata-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Caranguejo Prata Lata 350ml</h3>
-            <span class="preco">R$ 12,00</span>
+        <div class="card">
+            <img src="batata-frita-g.webp" class="produto-img">
+            <div class="info">
+                <h3>Batata Frita G</h3>
+                <span class="preco">R$ 16,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Batata Frita G', 16.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caranguejo Prata Lata 350ml', 12.00)">+</button>
-	</div>
-	
-    <div class="card">
-        <img src="caranguejo-ouro-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Caranguejo Ouro Lata 350ml</h3>
-            <span class="preco">R$ 12,00</span>
+
+        <div class="card">
+            <img src="bolinho-carne.png" class="produto-img">
+            <div class="info">
+                <h3>Bolinho Carne de Sol</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Bolinho de Carne de Sol', 12.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Caranguejo Ouro Lata 350ml', 12.00)">+</button>
-    </div>
 
-    <div class="card">
-        <img src="pitu-lata.webp" class="produto-img">
-        <div class="info">
-            <h3>Pitu Lata 350ml</h3>
-            <span class="preco">R$ 12,00</span>
+        <span class="categoria-titulo" id="bebidas-nao-alcoolicas">🥤 Bebidas Não-Alcoólicas</span>
+
+        <div class="card">
+            <img src="agua.webp" class="produto-img">
+            <div class="info">
+                <h3>Agua Mineral 500ml</h3>
+                <span class="preco">R$ 3,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Agua Mineral 500ml', 3.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Pitu Lata 350ml', 12.00)">+</button>
-    </div>
-	
-    <div class="card">
-        <img src="pitu-limao-lata.jpg" class="produto-img">
-        <div class="info">
-            <h3>Pitu Limão Lata 350ml</h3>
-            <span class="preco">R$ 12,00</span>
+
+        <div class="card">
+            <img src="aguacomgas.webp" class="produto-img">
+            <div class="info">
+                <h3>Agua Mineral com Gás 500ml</h3>
+                <span class="preco">R$ 4,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Agua Mineral com Gás 500ml', 4.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Pitu Limão Lata 350ml', 12.00)">+</button>
-	</div>
-	
-    <div class="card">
-        <img src="ypioca.webp" class="produto-img">
-        <div class="info">
-            <h3>Ypióca Lata 350ml</h3>
-            <span class="preco">R$ 14,00</span>
+
+        <div class="card">
+            <img src="coca.webp" class="produto-img">
+            <div class="info">
+                <h3>Coca-Cola Lata</h3>
+                <span class="preco">R$ 6,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Coca-Cola Lata', 6.00)">+</button>
         </div>
-        <button class="btn-add" onclick="addItem('Ypioca Lata 350ml', 14.00)">+</button>
-    </div>
 
-<div class="mapa-secao">
-    <span class="categoria-titulo" color: #000000; style="margin-top: 0;" id="como-chegar">📍 Como chegar</span>
-    
-    <div class="mapa-container">
-        <iframe 
-            class="map-container__iframe" 
-            width="100%" 
-            height="100%" 
-            style="border:0" 
-            src="https://maps.google.com/maps?q=Espetinho%20do%20Max%2C%20Rua%20Eucalipto%2C%2048%2C%20Extremoz%2C%20RN&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-            
-       </iframe>
+        <div class="card">
+            <img src="coca-zero-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Coca-Cola Zero Lata</h3>
+                <span class="preco">R$ 6,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Coca-Cola Zero Lata', 6.00)">+</button>
+        </div>
 
-    <div class="map-address">
-			</div>
-        
-    </div>
-    
-    <small class="endereco-texto">
-			<span class="map-address__text">Espetinho do Max, Rua Eucalipto, 48, Extremoz, RN</span>
-			<a href="https://maps.google.com/?q=Espetinho%20do%20Max%2C%20Rua%20Eucalipto%2C%2048%2C%20Extremoz%2C%20RN" target="_blank" class="btn" color="#ffffff">Como Chegar</a><br>
-        <strong>Aberto para consumo no local, retirada e delivery!</strong>
-    </small>
-</div>
+        <div class="card">
+            <img src="fanta-laranja.webp" class="produto-img">
+            <div class="info">
+                <h3>Fanta Laranja Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Fanta Laranja Lata', 5.00)">+</button>
+        </div>
 
-    <div class="depoimentos-secao">
-        <span class="categoria-titulo" id="depoimentos">💬 O que dizem nossos clientes</span>
+        <div class="card">
+            <img src="fanta-uva.webp" class="produto-img">
+            <div class="info">
+                <h3>Fanta Uva Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Fanta Uva Lata', 5.00)">+</button>
+        </div>
 
-        <div class="depoimento-card">
-            <div class="stars">★★★★★</div>
-            <p class="depoimento-texto">"Melhor espetinho da região! A carne é super macia. Chega sempre quentinho. Nota 10!"</p>
-            <div class="cliente-info">
-                <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
-                <div>
-                    <span class="cliente-nome">Carlos Silva</span>
-                    <span class="cliente-status">Cliente Verificado ✅</span>
+        <div class="card">
+            <img src="guarana.webp" class="produto-img">
+            <div class="info">
+                <h3>Guaraná Antártica Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Guaraná Antártica Lata', 5.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="guarana-zero-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Guaraná Antártica Zero Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Guaraná Antártica Zero Lata', 5.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="sprite.webp" class="produto-img">
+            <div class="info">
+                <h3>Sprite Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Sprite Lata', 5.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="pepsi.webp" class="produto-img">
+            <div class="info">
+                <h3>Pepsi Lata</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Pepsi Lata', 5.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="pepsi-litro.webp" class="produto-img">
+            <div class="info">
+                <h3>Pepsi 1 Litro</h3>
+                <span class="preco">R$ 9,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Pepsi 1 Litro', 9.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="guarana-litro.webp" class="produto-img">
+            <div class="info">
+                <h3>Guaraná 1 Litro</h3>
+                <span class="preco">R$ 9,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Guaraná 1 Litro', 9.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="redbull.webp" class="produto-img">
+            <div class="info">
+                <h3>Redbull Lata 250ml</h3>
+                <span class="preco">R$ 14,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Redbull Lata 250ml', 14.00)">+</button>
+        </div>
+
+        <span class="categoria-titulo" id="bebidas-alcoolicas">🍺 Bebidas Alcoólicas</span>
+
+        <div class="card">
+            <img src="heineken.webp" class="produto-img">
+            <div class="info">
+                <h3>Heineken Long Neck</h3>
+                <span class="preco">R$ 9,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Heineken Long Neck', 9.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="stella.webp" class="produto-img">
+            <div class="info">
+                <h3>Stella Artois Long Neck</h3>
+                <span class="preco">R$ 9,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Stella Artois Long Neck', 9.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="devassa-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Devassa Lata 350ml</h3>
+                <span class="preco">R$ 5,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Devassa Lata 350ml', 5.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="itaipava-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Itaipava Lata 350ml</h3>
+                <span class="preco">R$ 4,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Itaipava Lata 350ml', 4.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="matuta.webp" class="produto-img">
+            <div class="info">
+                <h3>Matuta Umburana Garrafa 300ml</h3>
+                <span class="preco">R$ 20,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Matuta Umburana Garrafa 300ml', 20.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="matuta.webp" class="produto-img">
+            <div class="info">
+                <h3>Matuta Mel e Limão Garrafa 300ml</h3>
+                <span class="preco">R$ 20,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Matuta Mel e Limão Garrafa 300ml', 20.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="caranguejo-prata-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Caranguejo Prata Lata 350ml</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caranguejo Prata Lata 350ml', 12.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="caranguejo-ouro-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Caranguejo Ouro Lata 350ml</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Caranguejo Ouro Lata 350ml', 12.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="pitu-lata.webp" class="produto-img">
+            <div class="info">
+                <h3>Pitu Lata 350ml</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Pitu Lata 350ml', 12.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="pitu-limao-lata.jpg" class="produto-img">
+            <div class="info">
+                <h3>Pitu Limão Lata 350ml</h3>
+                <span class="preco">R$ 12,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Pitu Limão Lata 350ml', 12.00)">+</button>
+        </div>
+
+        <div class="card">
+            <img src="ypioca.webp" class="produto-img">
+            <div class="info">
+                <h3>Ypióca Lata 350ml</h3>
+                <span class="preco">R$ 14,00</span>
+            </div>
+            <button class="btn-add" onclick="addItem('Ypioca Lata 350ml', 14.00)">+</button>
+        </div>
+
+        <div class="mapa-secao">
+            <span class="categoria-titulo" id="como-chegar" style="margin-top: 0;">📍 Como chegar</span>
+
+            <div class="mapa-container">
+                <iframe class="map-container__iframe" width="100%" height="100%" style="border:0"
+                    src="https://maps.google.com/maps?q=Espetinho%20do%20Max%2C%20Rua%20Eucalipto%2C%2048%2C%20Extremoz%2C%20RN&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <small class="endereco-texto">
+                <span class="map-address__text">Espetinho do Max, Rua Eucalipto, 48, Extremoz, RN</span><br>
+                <a href="https://maps.google.com/?q=Espetinho%20do%20Max%2C%20Rua%20Eucalipto%2C%2048%2C%20Extremoz%2C%20RN" target="_blank" class="btn">Como Chegar</a><br>
+                <strong>Aberto para consumo no local, retirada e delivery!</strong>
+            </small>
+        </div>
+
+        <div class="depoimentos-secao">
+            <span class="categoria-titulo" id="depoimentos">💬 O que dizem nossos clientes</span>
+
+            <div class="depoimento-card">
+                <div class="stars">★★★★★</div>
+                <p class="depoimento-texto">"Melhor espetinho da região! A carne é super macia. Chega sempre quentinho. Nota 10!"</p>
+                <div class="cliente-info">
+                    <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
+                    <div>
+                        <span class="cliente-nome">Carlos Silva</span>
+                        <span class="cliente-status">Cliente Verificado ✅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="depoimento-card">
+                <div class="stars">★★★★★</div>
+                <p class="depoimento-texto">"O caldinho de mocotó aqui é tudo de bom! Viro cliente toda semana. E de quebra dá pra jogar uma sinuca com os amigos. Top demais!"</p>
+                <div class="cliente-info">
+                    <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
+                    <div>
+                        <span class="cliente-nome">Rafael Julio</span>
+                        <span class="cliente-status">Cliente Verificado ✅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="depoimento-card">
+                <div class="stars">★★★★★</div>
+                <p class="depoimento-texto">"O espetinho de lingua é divino! Pedimos e adoramos. Ótimo atendimento pelo WhatsApp."</p>
+                <div class="cliente-info">
+                    <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
+                    <div>
+                        <span class="cliente-nome">Ana Souza</span>
+                        <span class="cliente-status">Cliente Verificado ✅</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-		<div class="depoimento-card">
-			<div class="stars">★★★★★</div>
-			<p class="depoimento-texto">""O caldinho de mocotó aqui é tudo de bom! Viro cliente toda semana. E de quebra dá pra jogar uma sinuca com os amigos. Top demais!"</p>
-			<div class="cliente-info">
-                <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
-                <div>
-                    <span class="cliente-nome">Rafael Julio</span>
-                    <span class="cliente-status">Cliente Verificado ✅</span>
+        <div id="feedback-whatsapp-max">
+            <div class="card-zap">
+                <div class="header-zap" id="avalie">
+                    <span class="icon-zap"><h2>🔥Espetinho do Max🔥</h2></span>
+                    <h3>Avalie sua experiência!</h3>
                 </div>
+
+                <form id="formZap">
+                    <label for="cliente">Seu Nome:</label>
+                    <input type="text" id="cliente" placeholder="Como podemos te chamar?" required>
+
+                    <label for="opiniao">O que achou do nosso Espetinho?</label>
+                    <textarea id="opiniao" rows="3" placeholder="Ex: A carne estava divina!" required></textarea>
+
+                    <button type="button" onclick="enviarParaWhatsapp()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" alt="Zap">
+                        Enviar Feedback para o Espetinho do Max
+                    </button>
+                </form>
             </div>
         </div>
 
-        <div class="depoimento-card">
-            <div class="stars">★★★★★</div>
-            <p class="depoimento-texto">"O espetinho de lingua é divino! Pedimos e adoramos. Ótimo atendimento pelo WhatsApp."</p>
-            <div class="cliente-info">
-                <img src="https://i0.wp.com/www.harakatuna.com/wp-content/uploads/2020/08/58571.jpg" class="cliente-foto">
-                <div>
-                    <span class="cliente-nome">Ana Souza</span>
-                    <span class="cliente-status">Cliente Verificado ✅</span>
-                </div>
-            </div>
-        </div>
+    </div> 
+</body>
 
-    </div><div id="feedback-whatsapp-max">
-    <div class="card-zap">
-        <div class="header-zap" id="avalie">
-            <span class="icon-zap"><h2>🔥Espetinho do Max🔥</h2></span>
-            <h3>Avalie sua experiência!</h3>
-            <p></p>
-        </div>
-        
-        <form id="formZap">
-            <label for="cliente">Seu Nome:</label>
-            <input type="text" id="cliente" placeholder="Como podemos te chamar?" required>
-
-            <label for="opiniao">O que achou do nosso Espetinho?</label>
-            <textarea id="opiniao" rows="3" placeholder="Ex: A carne estava divina!" required></textarea>
-
-            <button type="button" onclick="enviarParaWhatsapp()">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" alt="Zap">
-                Enviar Feedback para o Espetinho do Max
-            </button>
-        </form>
-    </div>
-</div>
-
-<script>
-function enviarParaWhatsapp() {
-    const telefone = "5584981472386"; // <-- COLOQUE O WHATSAPP DO MAX AQUI (DDD + número)
-    const nome = document.getElementById('cliente').value;
-    const feedback = document.getElementById('opiniao').value;
-    
-    if(!nome || !feedback) {
-        alert("Por favor, preencha o nome e sua opinião!");
-        return;
-    }
-
-    const mensagem = `Olá, Max! Me chamo *${nome}* e vim deixar um feedback sobre o espetinho:\n\n"${feedback}"`;
-    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-    
-    window.open(url, '_blank');
-}
-</script>
-	
-    <div id="checkout-area">
+<div id="checkout-area" class="container">
         <div class="head-check">
             <h3>🛒 Meu Pedido</h3>
             <button class="btn-clear" onclick="clearCart()">Limpar</button>
         </div>
-        <div id="cart-list"></div>
         
+        <div id="cart-list"></div>
+
         <form id="order-form">
-            <label>Nome</label>
+            <label for="name">Nome</label>
             <input type="text" id="name" required placeholder="Ex: João">
-            
-            <label>Em qual mesa você está? *</label>
+
+            <label for="address">Em qual mesa você está? *</label>
             <input type="text" id="address" required placeholder="Ex: Mesa 02">
-            
-            <label>Forma de Pagamento</label>
+
+            <label for="payment">Forma de Pagamento</label>
             <select id="payment">
                 <option value="">Selecione...</option>
                 <option value="Pix">Pix</option>
@@ -832,252 +1018,217 @@ function enviarParaWhatsapp() {
                 <option value="Dinheiro">Dinheiro</option>
             </select>
 
-            <label>Alguma observação?</label>
-            <input type="text" id="note" placeholder="">
+            <label for="note">Alguma observação?</label>
+            <input type="text" id="note" placeholder="Ex: Sem cebola, ponto da carne, etc.">
         </form>
     </div>
-</div>
 
-<div class="footer-nav" id="footer-nav">
-    <div class="total-box">
-        <small>Total do pedido</small>
-        <strong id="total-display">R$ 0,00</strong>
+    <div class="footer-nav" id="footer-nav">
+        <div class="total-box">
+            <small>Total do pedido</small>
+            <strong id="total-display">R$ 0,00</strong>
+        </div>
+        <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Pedido</button>
     </div>
-    <button class="btn-main" id="btn-action" onclick="handleAction()">Ver Pedido</button>
-</div>
 
-<script>
-    let cart = {};
-    let total = 0;
-    let isCheckingOut = false;
+    <button onclick="topo()" id="btnTop" class="fire-btn" title="Subir pro topo!">
+        <span class="flame-icon">🔥</span>
+    </button>
 
-    function addItem(name, price) {
-        if (cart[name]) {
-            cart[name].qty += 1;
-        } else {
-            cart[name] = { price: price, qty: 1 };
+    <script>
+        let cart = {};
+        let total = 0;
+        let isCheckingOut = false;
+
+        // Funções do Carrinho
+        function addItem(name, price) {
+            if (cart[name]) {
+                cart[name].qty += 1;
+            } else {
+                cart[name] = { price: price, qty: 1 };
+            }
+            total += price;
+            updateUI();
         }
-        total += price;
-        updateUI();
-    }
 
-    function updateUI() {
-        document.getElementById('total-display').innerText = `R$ ${total.toFixed(2).replace('.',',')}`;
-        const totalItems = Object.values(cart).reduce((t, item) => t + item.qty, 0);
-        
-        if (totalItems > 0) {
-            document.getElementById('footer-nav').style.display = 'flex';
-            if (!isCheckingOut) {
-                document.getElementById('btn-action').innerText = `Ver Pedido (${totalItems})`;
+        function updateUI() {
+            const totalDisplay = document.getElementById('total-display');
+            const footerNav = document.getElementById('footer-nav');
+            const btnAction = document.getElementById('btn-action');
+
+            totalDisplay.innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+            const totalItems = Object.values(cart).reduce((t, item) => t + item.qty, 0);
+
+            if (totalItems > 0) {
+                footerNav.style.display = 'flex';
+                if (!isCheckingOut) {
+                    btnAction.innerText = `Ver Pedido (${totalItems})`;
+                }
+            }
+
+            if (isCheckingOut) renderCart();
+        }
+
+        function renderCart() {
+            const list = document.getElementById('cart-list');
+            list.innerHTML = '';
+            for (let name in cart) {
+                const item = cart[name];
+                list.innerHTML += `
+                    <div class="line-item">
+                        <span><span class="badge">${item.qty}x</span> ${name}</span>
+                        <strong>R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</strong>
+                    </div>`;
             }
         }
 
-        if (isCheckingOut) renderCart();
-    }
-
-    function renderCart() {
-        const list = document.getElementById('cart-list');
-        list.innerHTML = '';
-        for (let name in cart) {
-            const item = cart[name];
-            list.innerHTML += `
-                <div class="line-item">
-                    <span><span class="badge">${item.qty}x</span> ${name}</span>
-                    <strong>R$ ${(item.price * item.qty).toFixed(2)}</strong>
-                </div>`;
-        }
-    }
-
-    function handleAction() {
-        if (!isCheckingOut) {
-            isCheckingOut = true;
-            renderCart();
-            document.getElementById('checkout-area').style.display = 'block';
-            document.getElementById('btn-action').innerText = "Finalizar no WhatsApp";
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        } else {
-            sendWhatsApp();
-        }
-    }
-
-    function clearCart() {
-        if (confirm("Deseja limpar seu pedido?")) {
-            cart = {};
-            total = 0;
-            isCheckingOut = false;
-            document.getElementById('checkout-area').style.display = 'none';
-            document.getElementById('footer-nav').style.display = 'none';
-            document.getElementById('btn-action').style.background = "#25d366";
-            document.getElementById('btn-action').innerText = "Ver Carrinho";
-        }
-    }
-
-    function sendWhatsApp() {
-        const name = document.getElementById('name').value;
-        const address = document.getElementById('address').value;
-        const payment = document.getElementById('payment').value;
-        const note = document.getElementById('note').value;
-
-        if (!address) {
-            alert("⚠️ Por favor, preencha a mesa em que você está!.");
-            return;
+        function handleAction() {
+            if (!isCheckingOut) {
+                isCheckingOut = true;
+                renderCart();
+                document.getElementById('checkout-area').style.display = 'block';
+                document.getElementById('btn-action').innerText = "Finalizar no WhatsApp";
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            } else {
+                sendWhatsApp();
+            }
         }
 
-        const phone = "5584981472386"; // SUBSTITUA PELO SEU WHATSAPP
-        let text = `*PEDIDO - MESA - ESPETINHO DO MAX*\n\n`;
-        
-        for (let name in cart) {
-            text += `✅ ${cart[name].qty}x ${name} - R$ ${(cart[name].price * cart[name].qty).toFixed(2)}\n`;
+        function clearCart() {
+            if (confirm("Deseja limpar seu pedido?")) {
+                cart = {};
+                total = 0;
+                isCheckingOut = false;
+                document.getElementById('checkout-area').style.display = 'none';
+                document.getElementById('footer-nav').style.display = 'none';
+                document.getElementById('btn-action').innerText = "Ver Carrinho";
+            }
         }
-        
-        text += `\n*💰 TOTAL: R$ ${total.toFixed(2)}*`;
-        text += `\n\n📍 *Nome:* ${name}`;
-        text += `\n\n📍 *Mesa:* ${address}`;
-        text += `\n💳 *Pagamento:* ${payment}`;
-        if (note) text += `\n📝 *Obs:* ${note}`;
 
-        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
-        window.open(url, '_blank');
-    }
-</script>
+        // Integração WhatsApp (Pedido e Feedback)
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const payment = document.getElementById('payment').value;
+            const note = document.getElementById('note').value;
 
-<button onclick="topo()" id="btnTop" class="fire-btn" title="Subir pro topo !">
-  <span class="flame-icon">🔥</span>
-</button>
+            if (!address) {
+                alert("⚠️ Por favor, preencha a mesa em que você está!");
+                return;
+            }
 
-<style>
-  /* Base do Botão */
-  .fire-btn {
-    display: block;
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    z-index: 99;
-    width: 60px;
-    height: 60px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    
-    /* Gradiente de fogo */
-    background: linear-gradient(0deg, #ff4500, #ff8c00, #ffd700);
-    box-shadow: 0 0 15px #ff4500, 0 0 30px #ff8c00;
-    
-    /* Animação de pulsação e brilho */
-    animation: pulse-fire 1.5s infinite alternate;
-    transition: transform 0.2s, background 0.3s;
-  }
+            const phone = "5584981472386";
+            let text = `*PEDIDO - MESA - ESPETINHO DO MAX*\n\n`;
 
-  .flame-icon {
-    font-size: 28px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
-  }
+            for (let name in cart) {
+                text += `✅ ${cart[name].qty}x ${name} - R$ ${(cart[name].price * cart[name].qty).toFixed(2).replace('.', ',')}\n`;
+            }
 
-  /* Efeito de "Chamas" pulsando ao redor */
-  @keyframes pulse-fire {
-    0% {
-      box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00;
-      transform: scale(1);
-    }
-    100% {
-      box-shadow: 0 0 25px #ff4500, 0 0 50px #ff8c00, 0 0 70px #ffd700;
-      transform: scale(1.1);
-    }
-  }
+            text += `\n*💰 TOTAL: R$ ${total.toFixed(2).replace('.', ',')}*`;
+            text += `\n\n👤 *Cliente:* ${name || 'Não informado'}`;
+            text += `\n📍 *Mesa:* ${address}`;
+            text += `\n💳 *Pagamento:* ${payment || 'A combinar'}`;
+            if (note) text += `\n📝 *Obs:* ${note}`;
 
-  /* Efeito ao passar o mouse */
-  .fire-btn:hover {
-    transform: scale(1.2) translateY(-5px);
-    background: linear-gradient(0deg, #ff0000, #ff4500, #ffae00);
-  }
+            const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
 
-  /* Efeito de "sacudir" como fogo */
-  .fire-btn:active {
-    animation: shake 0.1s infinite;
-  }
+        function enviarParaWhatsapp() {
+            const telefone = "5584981472386";
+            const nome = document.getElementById('cliente').value;
+            const feedback = document.getElementById('opiniao').value;
 
-  @keyframes shake {
-    0% { margin-left: 0rem; }
-    25% { margin-left: 0.1rem; }
-    75% { margin-left: -0.1rem; }
-    100% { margin-left: 0rem; }
-  }
-</style>
+            if (!nome || !feedback) {
+                alert("Por favor, preencha o nome e sua opinião!");
+                return;
+            }
 
-<style>
-  /* 1. Suavidade no clique (A mágica acontece aqui) */
-  html {
-    scroll-behavior: smooth;
-  }
+            const mensagem = `Olá, Max! Me chamo *${nome}* e vim deixar um feedback sobre o espetinho:\n\n"${feedback}"`;
+            const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
 
-  /* 2. Container em duas colunas */
-  .container-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 10px;                      /* Espaçamento entre botões */
-    padding: 15px;
-    max-width: 600px;               /* Ajuste conforme sua necessidade */
-    margin: 0 auto;
-  }
+        // Função Voltar ao Topo
+        const mybutton = document.getElementById("btnTop");
 
-  /* 3. Estilo dos Botões Sofisticados */
-  .btn-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    padding: 15px 10px;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    
-    /* Efeito de vidro e cores */
-    background: linear-gradient(135deg, #2c3e50, #000000);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    
-    /* Sombra suave */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-  }
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
 
-  /* 4. Efeito de Hover (Passar o mouse) */
-  .btn-item:hover {
-    background: linear-gradient(135deg, #ff4500, #ff8c00); /* Cor quente no foco */
-    transform: translateY(-3px); /* Sobe levemente */
-    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
+        function topo() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
-  /* Ajuste para mobile (se a tela for muito pequena, vira uma coluna só) */
-  @media (max-width: 400px) {
-    .container-menu {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
+    <style>
+        html { scroll-behavior: smooth; }
 
-<script>
-  const mybutton = document.getElementById("btnTop");
+        /* Botão de Fogo */
+        .fire-btn {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 99;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            background: linear-gradient(0deg, #ff4500, #ff8c00, #ffd700);
+            box-shadow: 0 0 15px #ff4500;
+            animation: pulse-fire 1.5s infinite alternate;
+            transition: transform 0.2s;
+        }
 
-  window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  };
+        .fire-btn:hover { transform: scale(1.2); }
+        .flame-icon { font-size: 28px; }
 
-  function topo() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
+        @keyframes pulse-fire {
+            0% { box-shadow: 0 0 10px #ff4500; transform: scale(1); }
+            100% { box-shadow: 0 0 30px #ff8c00, 0 0 50px #ffd700; transform: scale(1.1); }
+        }
 
+        /* Menu em Grid */
+        .container-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 15px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-item:hover {
+            background: linear-gradient(135deg, #ff4500, #ff8c00);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+        }
+
+        @media (max-width: 400px) {
+            .container-menu { grid-template-columns: 1fr; }
+        }
+    </style>
 </body>
 </html>
