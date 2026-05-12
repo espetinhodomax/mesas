@@ -222,16 +222,17 @@ font-size: 1.2rem;
     <p>📷 Fotos dos produtos meramente ilustrativas!</p>
 </header>
 
-<div class="container-links">
-  <a href="#espetinhos">Espetinhos</a>
-  <a href="#caldinhos">Caldinhos</a>
-  <a href="#petiscos">Petiscos</a>
-  <a href="#porcoes">Porções</a>
-  <a href="#bebidas-nao-alcoolicas">Bebidas Não Alcoólicas</a>
-  <a href="#bebidas-alcoolicas">Bebidas Alcoólicas</a>
-  <a href="#como-chegar">Como Chegar</a>
-  <a href="#depoimentos">Depoimentos</a>
-  <a href="#avalie">Deixe sua Avaliação</a>
+<div class="container-menu">
+  <a href="#espetinhos" class="btn-item">Espetinhos</a>
+  <a href="#caldinhos" class="btn-item">Caldinhos</a>
+  <a href="#petiscos" class="btn-item">Petiscos</a>
+  <a href="#porcoes" class="btn-item">Porções</a>
+  <a href="#avalie" class="btn-item">Deixe sua Avaliação</a>
+  <a href="#bebidas-nao-alcoolicas" class="btn-item">Bebidas Não Alcoólicas</a>
+  <a href="#bebidas-alcoolicas" class="btn-item">Bebidas Alcoólicas</a>
+  <a href="#como-chegar" class="btn-item">Como Chegar</a>
+  <a href="#depoimentos" class="btn-item">Depoimentos</a>
+  <a href="#promocoes" class="btn-item">Promoções</a>
 </div>
 	
 <div class="container">
@@ -1001,6 +1002,61 @@ function enviarParaWhatsapp() {
     25% { margin-left: 0.1rem; }
     75% { margin-left: -0.1rem; }
     100% { margin-left: 0rem; }
+  }
+</style>
+
+<style>
+  /* 1. Suavidade no clique (A mágica acontece aqui) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 2. Container em duas colunas */
+  .container-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 10px;                      /* Espaçamento entre botões */
+    padding: 15px;
+    max-width: 600px;               /* Ajuste conforme sua necessidade */
+    margin: 0 auto;
+  }
+
+  /* 3. Estilo dos Botões Sofisticados */
+  .btn-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 10px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    
+    /* Efeito de vidro e cores */
+    background: linear-gradient(135deg, #2c3e50, #000000);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    
+    /* Sombra suave */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  /* 4. Efeito de Hover (Passar o mouse) */
+  .btn-item:hover {
+    background: linear-gradient(135deg, #ff4500, #ff8c00); /* Cor quente no foco */
+    transform: translateY(-3px); /* Sobe levemente */
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Ajuste para mobile (se a tela for muito pequena, vira uma coluna só) */
+  @media (max-width: 400px) {
+    .container-menu {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 
