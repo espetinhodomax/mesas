@@ -13,7 +13,37 @@
         header h1 { margin: 0; font-size: 2.6rem; text-transform: uppercase; letter-spacing: 1px; }
         header p { margin: 5px 0 0; font-size: 1.0rem; opacity: 0.9; }
 
-        .container { max-width: 550px; margin: auto; padding: 15px; }
+        .container { max-width: 550px; 
+                     margin: auto; 
+                     padding: 15px; }
+        .container2 { max-width: 500px; 
+                      text-align: justify; 
+                      text-decoration: none !important; 
+                      margin: auto; 
+                      padding: 15px;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center; 
+                       }
+.container-links {
+    display: grid;
+    /* Cria duas colunas com larguras iguais (1fr = 1 fração) */
+    grid-template-columns: 1fr 1fr; 
+    /* Espaço entre as linhas e colunas */
+    gap: 10px 20px; 
+    padding: 10px;
+   max-width: 550px; 
+                     margin: auto; 
+                     padding: 15px; }
+
+  .container-links a {
+    text-decoration: none;
+    color: #fff;
+    /* Garante que o link ocupe o espaço da coluna para facilitar o clique */
+    display: block; 
+    font-weight: bold;
+font-size: 1.2rem;
+  }
         
         .categoria-titulo { 
             color: #ffffff; font-size: 1.2rem; margin: 25px 0 15px; 
@@ -189,13 +219,24 @@
     <p>🔥 Os melhores espetinhos e caldos da região!</p>
     <h2>Faça seu pedido na Mesa</h2>
     <p>📷 Fotos dos produtos meramente ilustrativas!</p>
-    
 </header>
 
+<div class="container-links">
+  <a href="#espetinhos">Espetinhos</a>
+  <a href="#caldinhos">Caldinhos</a>
+  <a href="#petiscos">Petiscos</a>
+  <a href="#porcoes">Porções</a>
+  <a href="#avalie">Deixe sua Avaliação</a>
+  <a href="#bebidas-nao-alcoolicas">Bebidas Não Alcoólicas</a>
+  <a href="#bebidas-alcoolicas">Bebidas Alcoólicas</a>
+  <a href="#como-chegar">Como Chegar</a>
+  <a href="#depoimentos">Depoimentos</a>
+</div>
+	
 <div class="container">
     
-    <span class="categoria-titulo">🍢 Espetinhos</span>
-
+    <span class="categoria-titulo" id="espetinhos">🍢 Espetinhos</span>
+	
     <div class="card">
         <img src="carne.webp" class="produto-img">
         <div class="info">
@@ -295,7 +336,7 @@
         <button class="btn-add" onclick="addItem('Espetinho de Porco', 5.50)">+</button>
     </div>
 
-    <span class="categoria-titulo">🍱 Caldinhos</span>
+    <span class="categoria-titulo" id="caldinhos">🍱 Caldinhos</span>
 
     <div class="card">
         <img src="caldo-camarao.png" class="produto-img">
@@ -356,7 +397,7 @@
         </div>
         <button class="btn-add" onclick="addItem('Picado de Carneiro', 12.00)">+</button>
     </div>
- <span class="categoria-titulo">🍱 Petiscos</span>
+ <span class="categoria-titulo" id="petiscos">🍱 Petiscos</span>
 
     <div class="card">
         <img src="petisco-carne.webp" class="produto-img">
@@ -397,7 +438,7 @@
         </div>
         <button class="btn-add" onclick="addItem('Calabresa com Fritas', 35.00)">+</button>
     </div>
-    <span class="categoria-titulo">🍱 Porções</span>
+    <span class="categoria-titulo" id="porcoes">🍱 Porções</span>
 
     <div class="card">
         <img src="batata-frita-p.png" class="produto-img">
@@ -439,7 +480,7 @@
         <button class="btn-add" onclick="addItem('Bolinho de Carne de Sol', 12.00)">+</button>
 	</div>
 	
-    <span class="categoria-titulo">🥤 Bebidas Não-Alcoólicas</span>
+    <span class="categoria-titulo" id="bebidas-nao-alcoolicas">🥤 Bebidas Não-Alcoólicas</span>
 
     <div class="card">
         <img src="agua.webp" class="produto-img">
@@ -558,7 +599,7 @@
         <button class="btn-add" onclick="addItem('Redbull Lata 250ml', 14.00)">+</button>
 	</div>
 	
-    <span class="categoria-titulo">🥤 Bebidas Alcoólicas</span>
+    <span class="categoria-titulo" id="bebidas-alcoolicas">🥤 Bebidas Alcoólicas</span>
 
     <div class="card">
         <img src="heineken.webp" class="produto-img">
@@ -660,7 +701,7 @@
     </div>
 
 <div class="mapa-secao">
-    <span class="categoria-titulo" color: #000000; style="margin-top: 0;">📍 Como chegar</span>
+    <span class="categoria-titulo" color: #000000; style="margin-top: 0;" id="como-chegar">📍 Como chegar</span>
     
     <div class="mapa-container">
         <iframe 
@@ -688,7 +729,7 @@
 </div>
 
     <div class="depoimentos-secao">
-        <span class="categoria-titulo">💬 O que dizem nossos clientes</span>
+        <span class="categoria-titulo" id="depoimentos">💬 O que dizem nossos clientes</span>
 
         <div class="depoimento-card">
             <div class="stars">★★★★★</div>
@@ -728,7 +769,7 @@
 
     </div><div id="feedback-whatsapp-max">
     <div class="card-zap">
-        <div class="header-zap">
+        <div class="header-zap" id="avalie">
             <span class="icon-zap"><h2>🔥Espetinho do Max🔥</h2></span>
             <h3>Avalie sua experiência!</h3>
             <p></p>
